@@ -41,20 +41,20 @@ end
 # initialize vendored Ethereum::ABI
 #
 require_relative "lib/vendor/keccak"
-require_relative "vendor/ethereum-abi/constant"
-require_relative "vendor/ethereum-abi/utils"
-require_relative "vendor/ethereum-abi/exceptions"
-require_relative "vendor/ethereum-abi/abi"
-include EthereumABI::ABI
-include EthereumABI::Utils
+require_relative "vendor/ethereum-rb-abi/constant"
+require_relative "vendor/ethereum-rb-abi/utils"
+require_relative "vendor/ethereum-rb-abi/exceptions"
+require_relative "vendor/ethereum-rb-abi/abi"
+include EthereumRbABI::ABI
+include EthereumRbABI::Utils
 
 
 # init main module
-module Ethereum
+module EthereumRb
 end
 
 require_relative './lib/vendor/formatter'
-FRM = Ethereum::Formatter.new
+FRM = EthereumRb::Formatter.new
 
 
 
@@ -76,7 +76,7 @@ require_relative 'lib/interface'
 
 # ---
 
-module Ethereum
+module EthereumRb
   class Eth
     include Types
     include Interface

@@ -1,8 +1,8 @@
-module Ethereum::Connection; end
+module EthereumRb::Connection; end
 
 require_relative 'rpc'
 
-module Ethereum::Connection
+module EthereumRb::Connection
   
   class IPC
     include RPC

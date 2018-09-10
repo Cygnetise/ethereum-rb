@@ -1,4 +1,4 @@
-module Ethereum
+module EthereumRb
 
   VERSION = "1.0.0"
 

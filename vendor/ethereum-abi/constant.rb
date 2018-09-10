@@ -1,6 +1,6 @@
 # -*- encoding : ascii-8bit -*-
 
-module EthereumABI
+module EthereumRbABI
   module Constant
 
     BYTE_EMPTY = "".freeze

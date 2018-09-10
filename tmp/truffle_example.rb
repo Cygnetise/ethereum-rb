@@ -4,8 +4,8 @@ path_out = File.expand_path "../../../", __FILE__
 ENV["CONFIG_DIR"] = "#{path_out}/cygnetise_contracts/build"
 ENV["CONTRACT_ADDRESS"] = "0x1ea0c8b5206579a0f15d6bc53d3e9ee53267a81b"
 ENV["CONTRACT_NAME"] = "Cygnetise"
-require_relative '../ethereum'
-ETH = Ethereum::Eth.new
+require_relative '../ethereum-rb'
+ETH = EthereumRb::Eth.new
 ETH.init
 
 
@@ -89,7 +89,7 @@ class User < Helper
       hash = to_bin hash
       sig = to_bin sig
       ETH.set contract: :cygnetise, method: :createUser, params: [value, hash, sig, address]
-    rescue EthereumABI::ABI::EncodingError
+    rescue EthereumRbABI::ABI::EncodingError
       raise "ABI::EncodingError - Unable to encode values"
     end
   end
@@ -105,7 +105,7 @@ class User < Helper
       hash = to_bin hash
       sig = to_bin sig
       ETH.set contract: :cygnetise, method: :updateUser, params: [@id, value, hash, sig, address]
-    rescue EthereumABI::ABI::EncodingError
+    rescue EthereumRbABI::ABI::EncodingError
       raise "ABI::EncodingError - Unable to encode values"
     ensure
       @value = value
@@ -119,7 +119,7 @@ class User < Helper
   def self.count
     begin
       ETH.get contract: :cygnetise, method: :usersCount, params: []
-    rescue EthereumABI::ABI::DecodingError
+    rescue EthereumRbABI::ABI::DecodingError
       raise "ABI::DecodingError - Unable to decode value from ethereum"
     end
   end
@@ -133,7 +133,7 @@ class User < Helper
       rescue
       end
       value
-    rescue EthereumABI::ABI::DecodingError
+    rescue EthereumRbABI::ABI::DecodingError
       raise "ABI::DecodingError - Unable to decode value from ethereum"
     end
   end
@@ -147,7 +147,7 @@ class User < Helper
       rescue
       end
       value
-    rescue EthereumABI::ABI::DecodingError
+    rescue EthereumRbABI::ABI::DecodingError
       raise "ABI::DecodingError - Unable to decode value from ethereum"
     end
   end
@@ -234,7 +234,7 @@ class Org
       value = nil if value.empty?
       value['_value'] = Oj.load value['_value']
       value
-    rescue EthereumABI::ABI::DecodingError
+    rescue EthereumRbABI::ABI::DecodingError
       raise "ABI::DecodingError - Unable to decode value from ethereum"
     end
   end

@@ -4,8 +4,8 @@ require "#{path}/lib/version"
 
 Gem::Specification.new do |s|
   s.platform    = Gem::Platform::RUBY
-  s.name        = 'ethereum'
-  s.version     = Ethereum::VERSION
+  s.name        = 'ethereum-rb'
+  s.version     = EthereumRb::VERSION
   s.summary     = 'Call Ethereum via Ruby'
   s.description = 'Ethereum RPC Ruby API'
 

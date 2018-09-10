@@ -3,12 +3,12 @@
 require_relative 'abi/type'
 require_relative 'abi/contract_translator'
 
-module EthereumABI
+module EthereumRbABI
 
   ##
   # Contract ABI encoding and decoding.
   #
-  # @see https://github.com/ethereum/wiki/wiki/Ethereum-Contract-ABI
+  # @see https://github.com/ethereum/wiki/wiki/EthereumRb-Contract-ABI
   #
   module ABI
 
@@ -47,7 +47,7 @@ module EthereumABI
     ##
     # Encodes a single value (static or dynamic).
     #
-    # @param type [Ethereum::ABI::Type] value type
+    # @param type [EthereumRb::ABI::Type] value type
     # @param arg [Object] value
     #
     # @return [String] encoded bytes

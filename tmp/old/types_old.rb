@@ -9,7 +9,7 @@ end
 RSpec::Expectations.configuration.on_potential_false_positives = :nothing
 
 
-include Ethereum::Formatting
+include EthereumRb::Formatting
 
 
 

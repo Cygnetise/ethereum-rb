@@ -1,7 +1,7 @@
-require_relative '../../ethereum'
+require_relative '../../ethereum-rb'
 require 'pp'
 
-RPC = Ethereum::Eth.new
+RPC = EthereumRb::Eth.new
 
 RPC.start!
 

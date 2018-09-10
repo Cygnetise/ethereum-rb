@@ -1,8 +1,8 @@
-require_relative '../ethereum'
+require_relative '../ethereum-rb'
 
-ETH = Ethereum::Eth.new
+ETH = EthereumRb::Eth.new
 
-module Ethereum::CRU
+module EthereumRb::CRU
   def attributes(attrs)
     @@attrs = attrs
   end
@@ -26,7 +26,7 @@ module Ethereum::CRU
 end
 
 class Entry
-  extend Ethereum::CRU
+  extend EthereumRb::CRU
   attributes %w(name)
 end
 

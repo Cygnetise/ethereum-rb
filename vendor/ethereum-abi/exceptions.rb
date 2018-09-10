@@ -1,6 +1,6 @@
 # -*- encoding : ascii-8bit -*-
 
-module EthereumABI
+module EthereumRbABI
 
   class DeprecatedError < StandardError; end
   class ChecksumError < StandardError; end

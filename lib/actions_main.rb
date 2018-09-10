@@ -130,7 +130,7 @@ module ActionsMain
 
   def transact(contract:, method:, params: [])
     from = @coinbase
-    raise "Ethereum RPC is not initialized, please run ETH.start! or RPC.start! to have a non-nil coinbase" unless from
+    raise "Ethereum-Rb RPC is not initialized, please run ETH.start! or RPC.start! to have a non-nil coinbase" unless from
     contract = @interface.fetch contract
     contract_address = contract[:address]
 

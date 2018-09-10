@@ -1,8 +1,8 @@
 # demo usage
 
-require_relative '../../ethereum'
+require_relative '../../ethereum-rb'
 
-ETH = Ethereum::Eth.new
+ETH = EthereumRb::Eth.new
 
 ETH.start do |eth|
   eth.set contract: :op_return, method: :set, params: ['{ "message": "hello world" }']

@@ -1,6 +1,6 @@
-require_relative '../ethereum'
+require_relative '../ethereum-rb'
 
-ETH = Ethereum::Eth.new
+ETH = EthereumRb::Eth.new
 
 ETH.start do |eth|
   val = eth.get contract: :op_return, method: :data, params: []

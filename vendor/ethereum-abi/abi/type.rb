@@ -1,6 +1,6 @@
 # -*- encoding : ascii-8bit -*-
 
-module EthereumABI
+module EthereumRbABI
   module ABI
     class Type
 
@@ -106,7 +106,7 @@ module EthereumABI
       # @example
       #   Type.parse("uint256[2][]").subtype # => Type.new('uint', 256, [2])
       #
-      # @return [Ethereum::ABI::Type]
+      # @return [EthereumRb::ABI::Type]
       #
       def subtype
         @subtype ||= self.class.new(base, sub, dims[0...-1])

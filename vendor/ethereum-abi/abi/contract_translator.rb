@@ -3,7 +3,7 @@
 require 'json'
 # TODO: switch json with OJ (faster)
 
-module EthereumABI
+module EthereumRbABI
   module ABI
     class ContractTranslator
 
@@ -79,7 +79,7 @@ module EthereumABI
       #
       # @return [String] The encoded function name and arguments so that it can
       #   be used with the evm to execute a function call, the binary string
-      #   follows the Ethereum Contract ABI.
+      #   follows the EthereumRb Contract ABI.
       #
       def encode(name, args)
         raise ValueError, "Unknown function #{name}" unless function_data.include?(name)

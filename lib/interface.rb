@@ -1,6 +1,6 @@
 # require 'pp'
 
-module Ethereum
+module EthereumRb
   module Interface
     # ABI
 

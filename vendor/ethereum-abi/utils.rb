@@ -4,7 +4,7 @@ require 'digest'
 require 'digest/sha3'
 require 'openssl'
 
-module EthereumABI
+module EthereumRbABI
   module Utils
 
     extend self

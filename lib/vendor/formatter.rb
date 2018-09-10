@@ -1,6 +1,6 @@
 # from DigixGlobal/ethereum-ruby on github: https://github.com/DigixGlobal/ethereum-ruby/blob/2c9b79c3e9f9e1f8f9569fb26162888a081c0e38/lib/ethereum/formatter.rb
 
-module Ethereum
+module EthereumRb
   class Formatter
 
     # we're using only to/from ascii, everything else is commented

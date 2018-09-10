@@ -1,6 +1,6 @@
 require_relative 'spec_helper'
 
-include Ethereum::Formatting
+include EthereumRb::Formatting
 
 describe "Types and Formatters - #transform_params" do
   it "hello worlds" do

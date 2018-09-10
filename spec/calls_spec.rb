@@ -1,7 +1,7 @@
 require_relative 'spec_helper'
 require_relative '../ethereum'
 
-ETH = Ethereum::Eth.new
+ETH = EthereumRb::Eth.new
 ETH.start!
 
 describe "RPC Calls" do

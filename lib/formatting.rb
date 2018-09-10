@@ -1,4 +1,4 @@
-module Ethereum
+module EthereumRb
 module Formatting
 
   private

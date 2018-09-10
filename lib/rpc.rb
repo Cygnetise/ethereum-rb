@@ -1,6 +1,6 @@
 require 'pp'
 
-module Ethereum::Connection::RPC
+module EthereumRb::Connection::RPC
   def init_id
     @id = 0
   end
