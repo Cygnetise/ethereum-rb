@@ -1,6 +1,6 @@
 require_relative 'env'
 
-module Ethereum
+module EthereumRb
   class Eth
 
     attr_reader :interface
